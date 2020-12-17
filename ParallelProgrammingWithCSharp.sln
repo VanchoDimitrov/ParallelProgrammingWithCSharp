@@ -3,51 +3,75 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Thread-Introduction", "..\01.Threads-Introduction\01.Thread-Introduction.csproj", "{F175C242-9976-455D-91A0-B50456E2C9FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Thread-Introduction", "..\01.Threads-Introduction\01.Thread-Introduction.csproj", "{F175C242-9976-455D-91A0-B50456E2C9FD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{36BAEB0A-2479-426E-9DED-BF88E2C9F5A7} = {36BAEB0A-2479-426E-9DED-BF88E2C9F5A7}
+		{0EFE1114-99EF-42EA-8EED-45151AB326C9} = {0EFE1114-99EF-42EA-8EED-45151AB326C9}
+		{4491701A-8CC2-4B5D-9993-BC9BBF6DE100} = {4491701A-8CC2-4B5D-9993-BC9BBF6DE100}
+		{7DF30F32-C4E2-4A09-8CCD-32069F194BFC} = {7DF30F32-C4E2-4A09-8CCD-32069F194BFC}
+		{C5A4B637-7993-4B18-BF6C-4BCF2E9AA69C} = {C5A4B637-7993-4B18-BF6C-4BCF2E9AA69C}
+		{19FBE139-F8B3-44E7-B687-DF1E010C72EC} = {19FBE139-F8B3-44E7-B687-DF1E010C72EC}
+		{C15A0642-9127-40B3-9F9B-A1D8CECEED3C} = {C15A0642-9127-40B3-9F9B-A1D8CECEED3C}
+		{7D9CCB58-16F0-4447-9B47-118CB6573F53} = {7D9CCB58-16F0-4447-9B47-118CB6573F53}
+		{792D1059-3B50-46A7-A601-A0D9AEF5523A} = {792D1059-3B50-46A7-A601-A0D9AEF5523A}
+		{9AA69477-A543-4D44-820C-683D093633DF} = {9AA69477-A543-4D44-820C-683D093633DF}
+		{235F6685-0D18-42F3-A013-33115D23B0A9} = {235F6685-0D18-42F3-A013-33115D23B0A9}
+		{CA140A88-3541-4418-B2DC-6FC3991B179F} = {CA140A88-3541-4418-B2DC-6FC3991B179F}
+		{FED0FF9D-20F1-4C3B-9967-59CF64421636} = {FED0FF9D-20F1-4C3B-9967-59CF64421636}
+		{9D633EAF-FE4E-4257-9AA2-53EF1925442F} = {9D633EAF-FE4E-4257-9AA2-53EF1925442F}
+		{883413BF-C788-45CD-B342-ADC90CAD03B5} = {883413BF-C788-45CD-B342-ADC90CAD03B5}
+		{9CD6AAC1-E444-4C06-B47E-E9F4F1A32C55} = {9CD6AAC1-E444-4C06-B47E-E9F4F1A32C55}
+		{BEE713CD-D878-4D71-A4C4-5C9ACE532486} = {BEE713CD-D878-4D71-A4C4-5C9ACE532486}
+		{BBFA0CD3-490F-4B1B-A93C-1FCFD1BC8A8E} = {BBFA0CD3-490F-4B1B-A93C-1FCFD1BC8A8E}
+		{CBC8A1D6-D573-4490-A6A2-1C0A85175DB4} = {CBC8A1D6-D573-4490-A6A2-1C0A85175DB4}
+		{7078B5D6-11F4-4661-962F-9093DBD288E7} = {7078B5D6-11F4-4661-962F-9093DBD288E7}
+		{F63B1BE8-231B-4764-91FA-3328F0715EAA} = {F63B1BE8-231B-4764-91FA-3328F0715EAA}
+		{67FF3DF8-B103-4E32-BB27-2A9992D3E70C} = {67FF3DF8-B103-4E32-BB27-2A9992D3E70C}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Thread-IsBackground", "..\01.Threads-IsBackground\02.Thread-IsBackground.csproj", "{4491701A-8CC2-4B5D-9993-BC9BBF6DE100}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.Thread-IsBackground", "..\01.Threads-IsBackground\02.Thread-IsBackground.csproj", "{4491701A-8CC2-4B5D-9993-BC9BBF6DE100}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Thread-Abort", "..\01.Threads-Abort\03.Thread-Abort.csproj", "{7D9CCB58-16F0-4447-9B47-118CB6573F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03.Thread-Abort", "..\01.Threads-Abort\03.Thread-Abort.csproj", "{7D9CCB58-16F0-4447-9B47-118CB6573F53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Thread-Thread-pool", "..\04.Thread-Thread-pool\04.Thread-Thread-pool.csproj", "{CA140A88-3541-4418-B2DC-6FC3991B179F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04.Thread-Thread-pool", "..\04.Thread-Thread-pool\04.Thread-Thread-pool.csproj", "{CA140A88-3541-4418-B2DC-6FC3991B179F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Task-Introduction", "..\01.Task-Introduction\05.Task-Introduction.csproj", "{67FF3DF8-B103-4E32-BB27-2A9992D3E70C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05.Task-Introduction", "..\01.Task-Introduction\05.Task-Introduction.csproj", "{67FF3DF8-B103-4E32-BB27-2A9992D3E70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Task-return-value", "..\06.Task-return-value\06.Task-return-value.csproj", "{19FBE139-F8B3-44E7-B687-DF1E010C72EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Task-return-value", "..\06.Task-return-value\06.Task-return-value.csproj", "{19FBE139-F8B3-44E7-B687-DF1E010C72EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Task-Parrent-Child", "..\07.Task-Task-factory\07.Task-Parrent-Child.csproj", "{7DF30F32-C4E2-4A09-8CCD-32069F194BFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07.Task-Parrent-Child", "..\07.Task-Task-factory\07.Task-Parrent-Child.csproj", "{7DF30F32-C4E2-4A09-8CCD-32069F194BFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Task-Task-Factory", "..\08.Task-Task-Factory\08.Task-Task-Factory.csproj", "{792D1059-3B50-46A7-A601-A0D9AEF5523A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08.Task-Task-Factory", "..\08.Task-Task-Factory\08.Task-Task-Factory.csproj", "{792D1059-3B50-46A7-A601-A0D9AEF5523A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Task-Multiple", "..\09.Task-Multiple\09.Task-Multiple.csproj", "{883413BF-C788-45CD-B342-ADC90CAD03B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09.Task-Multiple", "..\09.Task-Multiple\09.Task-Multiple.csproj", "{883413BF-C788-45CD-B342-ADC90CAD03B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Task-Task-Run-Continue-With-Methods-Usage", "..\10.Task-Task-Run-Continue-With-Methods-Usage\10.Task-Task-Run-Continue-With-Methods-Usage.csproj", "{36BAEB0A-2479-426E-9DED-BF88E2C9F5A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.Task-Task-Run-Continue-With-Methods-Usage", "..\10.Task-Task-Run-Continue-With-Methods-Usage\10.Task-Task-Run-Continue-With-Methods-Usage.csproj", "{36BAEB0A-2479-426E-9DED-BF88E2C9F5A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Task-Cancellation-Token", "..\11.Task-Cancellation-Token\11.Task-Cancellation-Token.csproj", "{CBC8A1D6-D573-4490-A6A2-1C0A85175DB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.Task-Cancellation-Token", "..\11.Task-Cancellation-Token\11.Task-Cancellation-Token.csproj", "{CBC8A1D6-D573-4490-A6A2-1C0A85175DB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.TaskParallelLibrary-Data Parallelism", "..\12.TaskParallelLibrary-Introduction\12.TaskParallelLibrary-Data Parallelism.csproj", "{F63B1BE8-231B-4764-91FA-3328F0715EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.TaskParallelLibrary-Data Parallelism", "..\12.TaskParallelLibrary-Introduction\12.TaskParallelLibrary-Data Parallelism.csproj", "{F63B1BE8-231B-4764-91FA-3328F0715EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.TaskParallelLibrary-Parallel-For-Loop", "..\13.12.TaskParallelLibrary-Parallel-For-Loop\13.TaskParallelLibrary-Parallel-For-Loop.csproj", "{BEE713CD-D878-4D71-A4C4-5C9ACE532486}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.TaskParallelLibrary-Parallel-For-Loop", "..\13.12.TaskParallelLibrary-Parallel-For-Loop\13.TaskParallelLibrary-Parallel-For-Loop.csproj", "{BEE713CD-D878-4D71-A4C4-5C9ACE532486}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.TaskParallelLibrary-Parallel-For-Each-Loop", "..\14.TaskParallelLibrary-Parallel-For-Each-Loop\14.TaskParallelLibrary-Parallel-For-Each-Loop.csproj", "{235F6685-0D18-42F3-A013-33115D23B0A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.TaskParallelLibrary-Parallel-For-Each-Loop", "..\14.TaskParallelLibrary-Parallel-For-Each-Loop\14.TaskParallelLibrary-Parallel-For-Each-Loop.csproj", "{235F6685-0D18-42F3-A013-33115D23B0A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "15.TaskParallelLibrary-Cancel-Parallel-For", "..\15.TaskParallelLibrary-Cancel-Parallel-For-Parallel-For-Each\15.TaskParallelLibrary-Cancel-Parallel-For.csproj", "{C15A0642-9127-40B3-9F9B-A1D8CECEED3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "15.TaskParallelLibrary-Cancel-Parallel-For", "..\15.TaskParallelLibrary-Cancel-Parallel-For-Parallel-For-Each\15.TaskParallelLibrary-Cancel-Parallel-For.csproj", "{C15A0642-9127-40B3-9F9B-A1D8CECEED3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "16.TaskParallelLibrary-Cancel-Parallel-For-Each", "..\16.TaskParallelLibrary-Cancel-Parallel-For-Each\16.TaskParallelLibrary-Cancel-Parallel-For-Each.csproj", "{0EFE1114-99EF-42EA-8EED-45151AB326C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "16.TaskParallelLibrary-Cancel-Parallel-For-Each", "..\16.TaskParallelLibrary-Cancel-Parallel-For-Each\16.TaskParallelLibrary-Cancel-Parallel-For-Each.csproj", "{0EFE1114-99EF-42EA-8EED-45151AB326C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "17.TaskParallelLibrary-Handle-Exceptions", "..\17.TaskParallelLibrary-Handle-Exceptions\17.TaskParallelLibrary-Handle-Exceptions.csproj", "{7078B5D6-11F4-4661-962F-9093DBD288E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17.TaskParallelLibrary-Handle-Exceptions", "..\17.TaskParallelLibrary-Handle-Exceptions\17.TaskParallelLibrary-Handle-Exceptions.csproj", "{7078B5D6-11F4-4661-962F-9093DBD288E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00.Parallel-programming-Resource-Deadlock", "..\18.Parallel-programming-Resource-Deadlock\00.Parallel-programming-Resource-Deadlock.csproj", "{9CD6AAC1-E444-4C06-B47E-E9F4F1A32C55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "00.Parallel-programming-Resource-Deadlock", "..\18.Parallel-programming-Resource-Deadlock\00.Parallel-programming-Resource-Deadlock.csproj", "{9CD6AAC1-E444-4C06-B47E-E9F4F1A32C55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "18.TaskParallelLibrary-Degree-of-Parallelism", "..\18.TaskParallelLibrary-Degree-of-Paralelism\18.TaskParallelLibrary-Degree-of-Parallelism.csproj", "{FED0FF9D-20F1-4C3B-9967-59CF64421636}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18.TaskParallelLibrary-Degree-of-Parallelism", "..\18.TaskParallelLibrary-Degree-of-Paralelism\18.TaskParallelLibrary-Degree-of-Parallelism.csproj", "{FED0FF9D-20F1-4C3B-9967-59CF64421636}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "19.PLINQ-Introduction", "..\19.PLINQ-Introduction\19.PLINQ-Introduction.csproj", "{9AA69477-A543-4D44-820C-683D093633DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19.PLINQ-Introduction", "..\19.PLINQ-Introduction\19.PLINQ-Introduction.csproj", "{9AA69477-A543-4D44-820C-683D093633DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20.PLINQ-Degree-of-Parallelism", "..\20.PLINQ-Degree-of-Parallelism\20.PLINQ-Degree-of-Parallelism.csproj", "{C5A4B637-7993-4B18-BF6C-4BCF2E9AA69C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20.PLINQ-Degree-of-Parallelism", "..\20.PLINQ-Degree-of-Parallelism\20.PLINQ-Degree-of-Parallelism.csproj", "{C5A4B637-7993-4B18-BF6C-4BCF2E9AA69C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21.PLINQ-Cancellation-token", "..\21.PLINQ-Cancellation-token\21.PLINQ-Cancellation-token.csproj", "{9D633EAF-FE4E-4257-9AA2-53EF1925442F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21.PLINQ-Cancellation-token", "..\21.PLINQ-Cancellation-token\21.PLINQ-Cancellation-token.csproj", "{9D633EAF-FE4E-4257-9AA2-53EF1925442F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22.PLINQ-Handling-exceptions", "..\22.PLINQ-Handling-exceptions\22.PLINQ-Handling-exceptions.csproj", "{BBFA0CD3-490F-4B1B-A93C-1FCFD1BC8A8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "22.PLINQ-Handling-exceptions", "..\22.PLINQ-Handling-exceptions\22.PLINQ-Handling-exceptions.csproj", "{BBFA0CD3-490F-4B1B-A93C-1FCFD1BC8A8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
