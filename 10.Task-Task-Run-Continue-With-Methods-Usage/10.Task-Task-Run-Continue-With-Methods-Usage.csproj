@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>_10.Task_Task_Run_Continue_With_Methods_Usage</RootNamespace>
+  </PropertyGroup>
+
+</Project>
