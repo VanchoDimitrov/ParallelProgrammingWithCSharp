@@ -1,104 +1,103 @@
-﻿using System;
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace _18.Parallel_programming_Resource_Deadlock
+namespace BlankCSharp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            #region Comments
-            //deadlock situation
 
-            //Thread 1 acquires lock A.
-            //Thread 2 acquires lock B.
+            // Thread 1 acquires Lock A
+            // Thread 2 acquires Lock B
 
-            //Explanation
-            //Thread 1 attempts to acquire lock B, but it is already held by Thread 2 as per the above and hence 
-            //Thread 1 is blocked.
+            // Explanation
+            // Thread 1 attemnts to acquire lock B, but it is already held by Thread 2 as per the above hence
+            // Thread 1 is blocked.
 
-            //Thread 2 attempts to acquire lock A, but it is already held by Thread 1 as per the above and hence
-            //Thread 2 is blocked.
-            #endregion
+            // Thread 2 attemnts to acquire lock A, but it is already held by Thread 1 as per the above hence
+            // Thread 2 is blocked.
 
-
-            var bankAccounts = new BankAccounts();
+            var registers = new CashRegisters();
 
             var thread1 = new Thread(() =>
             {
-                bankAccounts.TransferFromCityBankToLombardBank(500);
+                registers.TransferFromRegister1ToRegister2(500);
             });
 
-            Thread thread2 = new Thread(() =>
+            var thread2 = new Thread(() =>
             {
-                bankAccounts.TransferFromLombarBankToCitybank(500);
+                registers.TransferFromRegister2ToRegister1(500);
+            });
+
+            var thread3 = new Thread(() =>
+            {
+                registers.TransferFromRegister2ToRegister1(300);
             });
 
             thread1.Start();
             thread2.Start();
+            thread3.Start();
 
             Console.ReadKey();
         }
-    }
 
-    class BankAccounts
-    {
-        private decimal CityBankBalance;
-        private decimal LombardBankBalance;
-
-        //these are my locks
-        private object A = new object();
-        private object B = new object();
-
-        public BankAccounts()
+        class CashRegisters
         {
-            // lets say we have that much on our accounts
-            CityBankBalance = 1000;
-            LombardBankBalance = 1000;
-        }
+            private decimal Register1Balance;
+            private decimal Register2Balance;
 
-        public void TransferFromCityBankToLombardBank(int amount)
-        {
-            lock (A)
+            // locks
+            private object A = new object();
+            private object B = new object();
+
+            public CashRegisters()
             {
-                //Simulate computing time to get the value;
-                Thread.Sleep(100);
-                CityBankBalance -= amount;
-
-                lock (B)
-                {
-                    //Simulate computing time to get the value;
-                    Thread.Sleep(100);
-                    LombardBankBalance += amount;
-                }
+                this.Register1Balance = 1000;
+                this.Register2Balance = 1000;
             }
 
-            Console.WriteLine($"You transfered {amount} from your City bank account to your Lombard bank account.");
-            Console.WriteLine($"Balance of your City bank account: {CityBankBalance}");
-            Console.WriteLine($"Balance of your Lombard bank account: {LombardBankBalance}");
-            Console.WriteLine();
-        }
-
-        public void TransferFromLombarBankToCitybank(int amount)
-        {
-            lock (B)
+            public void TransferFromRegister1ToRegister2(decimal amount)
             {
-                //Simulate computing time to get the value;
-                Thread.Sleep(100);
-                LombardBankBalance -= amount;
-
                 lock (A)
                 {
-                    //Simulate computing time to get the value;
+                    // Simulate
                     Thread.Sleep(100);
-                    CityBankBalance += amount;
+                    Register1Balance -= amount;
+
+                    lock (B)
+                    {
+                        Thread.Sleep(100);
+                        Register2Balance += amount;
+                    }
                 }
+
+                Console.WriteLine($"You transfered {amount} from Register 1 to Register 2");
+                Console.WriteLine($"Balance of Register 1 {Register1Balance} Balance of Register 2 is {Register2Balance}");
+                Console.WriteLine();
             }
 
-            Console.WriteLine($"You transfered {amount} from your Lombard bank account to your City bank account.");
-            Console.WriteLine($"Balance of your City bank account: {CityBankBalance}");
-            Console.WriteLine($"Balance of your Lombard bank account: {LombardBankBalance}");
-            Console.WriteLine();
+            public void TransferFromRegister2ToRegister1(decimal amount)
+            {
+                lock (A)
+                {
+                    Thread.Sleep(100);
+                    Register2Balance -= amount;
+
+                    lock (B)
+                    {
+                        Thread.Sleep(100);
+                        Register1Balance += amount;
+                    }
+                }
+
+                Console.WriteLine($"You transfered {amount} from Register 2 to Register 1");
+                Console.WriteLine($"Balance of Register 2 {Register1Balance} Balance of Register 1 is {Register2Balance}");
+                Console.WriteLine();
+            }
         }
     }
 }
