@@ -16,15 +16,17 @@ namespace _21.PLINQ_Cancellation_token
             Task.Factory.StartNew(() =>
             {
                 if (Console.ReadKey().KeyChar == 'z')
+                {
                     cts.Cancel();
+                }
 
-                Console.WriteLine("Press any key to exit");
+                Console.WriteLine("'z' key pressed.");
             });
 
             // 1. Data Source
             var numbers = new List<int>();
 
-            for (int i = 0; i < 10000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 numbers.Add(i);
             }
@@ -34,8 +36,8 @@ namespace _21.PLINQ_Cancellation_token
 
             //parallel processing
             // the data will not be in order. Hence AsOrdered() which runs in parallel.
-            var query1 = from n in numbers.AsParallel().WithDegreeOfParallelism(4).WithCancellation(cts.Token)
-                         select n;
+            var query1 = (from n in numbers.AsParallel().WithDegreeOfParallelism(4).WithCancellation(cts.Token)
+                          select n).ToList();
 
             // 3. Execution
             foreach (var i in query1)

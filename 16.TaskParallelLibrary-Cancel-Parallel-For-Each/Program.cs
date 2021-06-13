@@ -54,7 +54,7 @@ namespace _16.TaskParallelLibrary_Cancel_Parallel_For_Each
                 Thread.Sleep(900);
                 Console.WriteLine("Number: {0}, Thread Id= {1}", number, Thread.CurrentThread.ManagedThreadId);
 
-                // if the cancellation token is being processed, stop the Parallel For loop
+                // if the cancellation token is being processed, stop the Parallel ForEach loop
                 po.CancellationToken.ThrowIfCancellationRequested();
             });
 
